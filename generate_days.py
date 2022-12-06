@@ -11,33 +11,13 @@ def generate_day(day,year):
     with open(f"{__location__}/{year}/day{day:02d}.py", "w") as f:
         f.write(
 f"""from aocd import get_data, submit
-import time
+data = get_data(day={day}, year={year}).splitlines()
 
-def part1(data: list[str]) -> int:
-    return 11
+#part1
+#submit(result, part="a", day={day}, year={year})
 
-def part2(data: list[str]) -> int:
-    pass
-
-def main(data):
-    print(data[0:10])
-
-    #print(part1(data))
-    #print(part2(data))
-
-    return 0,0
-    return part1(data), part2(data)
-
-if __name__ == "__main__":
-    data = get_data(day={day}, year={year}).splitlines()
-    start = time.time()
-    part1_,part2_ = main(data)
-    print("Time taken:", str(round((time.time() - start)*1000,4)), "milliseconds")
-
-    if part1_:
-        submit(part1_, part="a", day={day}, year={year})
-    if part2_:
-        submit(part2_, part="b", day={day}, year={year})
+#part2
+#submit(result, part="b", day={day}, year={year})
 """)
 
 if __name__ == "__main__":
@@ -46,5 +26,5 @@ if __name__ == "__main__":
     #     exit(1)
     # generate_day(sys.argv[1])
     for i in range(1, 26):
-        generate_day(i,2021)
+        generate_day(i,2022)
     pass

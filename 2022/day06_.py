@@ -1,33 +1,14 @@
 from aocd import get_data, submit
-import time
+data = get_data(day=6, year=2022).splitlines()
+line = data[0]
 
-def part1(data: list[str]) -> int:
-    line = data[0]
-    rep = 4
+def get_result(rep):
     return next(i+rep for i in range(0, len(line))if len(set(line[i:i + rep])) == rep)
 
-def part2(data: list[str]) -> int:
-    line = data[0]
-    rep = 14
-    return next(i+rep for i in range(0, len(line))if len(set(line[i:i + rep])) == rep)
+#part1
+result = get_result(4)
+submit(result, part="a", day=6, year=2022)
 
-def main(data):
-    # print(data[0:10])
-
-    print(part1(data))
-    print(part2(data))
-
-    return 0,0
-    return part1(data), part2(data)
-
-if __name__ == "__main__":
-    data = get_data(day=6, year=2022).splitlines()
-    start = time.time()
-    part1_,part2_ = main(data)
-    print("Time taken:", str(round((time.time() - start)*1000,4)), "milliseconds")
-
-    if part1_:
-        submit(part1_, part="a", day=6, year=2022)
-    if part2_:
-        submit(part2_, part="b", day=6, year=2022)
-
+#part2
+result = get_result(14)
+submit(result, part="b", day=6, year=2022)
