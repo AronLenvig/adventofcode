@@ -24,7 +24,6 @@ for line_index in range(0, len(data), 3):
     group1 = data[line_index]
     group2 = data[line_index + 1]
     group3 = data[line_index + 2]
-    #find a letter that is in all three groups
     result += next(get_int_from_letter(letter) for letter in group1 if letter in group2 and letter in group3)
     
 submit(result, part="b", day=3, year=2022)
