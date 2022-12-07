@@ -1,5 +1,5 @@
 from aocd import get_data, submit
-data = get_data(day=9, year=2021).splitlines()
+lines = get_data(day=9, year=2021).splitlines()
 
 #part1
 #submit(result, part="a", day=9, year=2021)

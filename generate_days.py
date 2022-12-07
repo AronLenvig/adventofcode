@@ -11,7 +11,7 @@ def generate_day(day,year):
     with open(f"{__location__}/{year}/day{day:02d}.py", "w") as f:
         f.write(
 f"""from aocd import get_data, submit
-data = get_data(day={day}, year={year}).splitlines()
+lines = get_data(day={day}, year={year}).splitlines()
 
 #part1
 #submit(result, part="a", day={day}, year={year})
@@ -25,6 +25,6 @@ if __name__ == "__main__":
     #     print("Usage: python generate_days.py <day>")
     #     exit(1)
     # generate_day(sys.argv[1])
-    for i in range(1, 26):
-        generate_day(i,2022)
+    for i in range(2, 26):
+        generate_day(i,2021)
     pass
