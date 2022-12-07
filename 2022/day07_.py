@@ -21,7 +21,7 @@ for line in data:
             dirs_size["/".join(paths[:i+1])] += int(words[0])
 
 max_size = 100_000
-result = sum([value for value in dirs_size.items() if value < max_size])
+result = sum([value for value in dirs_size.values() if value < max_size])
 submit(result, part="a", day=7, year=2022)
 
 #part2
