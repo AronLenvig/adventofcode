@@ -25,6 +25,6 @@ if __name__ == "__main__":
     #     print("Usage: python generate_days.py <day>")
     #     exit(1)
     # generate_day(sys.argv[1])
-    for i in range(2, 26):
-        generate_day(i,2021)
+    for i in range(1, 25):
+        generate_day(i,2023)
     pass
