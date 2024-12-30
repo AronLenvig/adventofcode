@@ -4,7 +4,7 @@ import os
 
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
 
-def generate_day(day,year):
+def generate_day(day, year):
     #check if days folder exists, if not create it
     if not os.path.exists(f"{__location__}/{year}"):
         os.makedirs(f"{__location__}/{year}")
@@ -25,6 +25,6 @@ if __name__ == "__main__":
     #     print("Usage: python generate_days.py <day>")
     #     exit(1)
     # generate_day(sys.argv[1])
-    for i in range(1, 25):
-        generate_day(i,2023)
+    for i in range(2, 26):
+        generate_day(i,2021)
     pass

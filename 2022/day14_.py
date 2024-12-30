@@ -126,4 +126,4 @@ def part2():
     print(result)
     submit(result, part="b", day=14, year=2022)
 
-part2()
+part1()
